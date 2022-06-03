@@ -1,0 +1,19 @@
+@import url('fonts/Dancing_Script.css');
+
+body {
+    background-color: #03989e;
+}
+.container .row div h1{
+  font-family: 'Dancing Script', cursive;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+}
+nav.navbar {
+  font-size: 18px;
+  background-color: rgb(255, 255, 255);
+}
+nav.navbar .container .navbar-collapse ul.navbar-nav li.nav-item a {
+  padding: 6px 30px;
+  font-weight: bold;
+}

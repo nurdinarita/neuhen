@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\FormulirController;
 use App\Http\Controllers\InformasiController;
@@ -19,9 +19,11 @@ Route::get('check_slug', function () {
     return response()->json(['slug' => $slug]);
 });
 
+
+
 // Beranda
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/{slug}/show', [HomeController::class, 'show']);
+Route::get('/', [IndexController::class, 'index']);
+Route::get('/{slug}/show', [IndexController::class, 'show']);
 // Akhir Beranda
 
 // Profil
@@ -53,3 +55,7 @@ Route::resource('/admin/pengumuman', PengumumanController::class);
 Route::resource('/admin/gallery', GalleryController::class);
 // Route::get('/admin/berita-gampong/search', [BeritaController::class, 'search']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

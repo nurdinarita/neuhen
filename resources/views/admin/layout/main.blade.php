@@ -81,11 +81,11 @@
                                 Gallery
                             </a>
                             <div class="sb-sidenav-menu-heading">Aparatur Desa</div>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link {{ Request::is('admin/organizations') || $title == 'Edit Struktur Organisasi' || $title == 'Tambah Struktur Organisasi' || $title == 'Detail Struktur Organisasi' ? 'active' : '' }}" href="{{ url('admin/organizations') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-sitemap"></i></div>
                                 Struktur Organisasi
                             </a>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="{{ url('admin/formulir-masuk') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
                                 Formulir Masuk
                             </a>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\News;
+use App\Models\Announcement;
+use App\Models\Activity;
 
 class InformasiController extends Controller
 {
@@ -34,6 +36,26 @@ class InformasiController extends Controller
             'recent_news' => $recent_news,
             'prev' => $prevContent,
             'next' => $nextContent,
+        ]);
+    }
+
+    public function pengumuman()
+    {
+        $announcements = Announcement::orderBy('id', 'desc')->paginate(5);
+        $recent_announcements = Announcement::select('announcement', 'created_at')->orderBy('id', 'desc')->take(4)->get();
+        return view('pengumuman')->with([
+            'title' => 'Pengumuman Gampong',
+            'announcements' => $announcements,
+            'recent_announcements' => $recent_announcements,
+        ]);
+    }
+
+    public function kegiatan()
+    {
+        $activities = Activity::orderBy('id', 'desc')->paginate(8);
+        return view('kegiatan')->with([
+            'title' => 'Kegiatan Gampong',
+            'activities' => $activities,
         ]);
     }
 }

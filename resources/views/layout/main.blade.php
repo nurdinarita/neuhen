@@ -102,8 +102,8 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item {{ Request::is('informasi/berita') ? 'active' : '' }}" href="{{ url('informasi/berita') }}">Berita</a></li>
-                <li><a class="dropdown-item" href="#">Pengumuman</a></li>
-                <li><a class="dropdown-item" href="#">Kegiatan</a></li>
+                <li><a class="dropdown-item {{ Request::is('informasi/pengumuman') ? 'active' : '' }}"  href="{{ url('informasi/pengumuman') }}">Pengumuman</a></li>
+                <li><a class="dropdown-item {{ Request::is('informasi/kegiatan') ? 'active' : '' }}" href="{{ url('informasi/kegiatan') }}">Kegiatan</a></li>
               </ul>
             </li>
             <li class="nav-item ">

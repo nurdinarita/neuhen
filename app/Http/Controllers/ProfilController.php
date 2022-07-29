@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Organization;
 
 class ProfilController extends Controller
 {
@@ -21,7 +22,8 @@ class ProfilController extends Controller
     public function struktur_organisasi()
     {
         return view('struktur_organisasi')->with([
-            'title' => 'Struktur Organisasi'
+            'title' => 'Struktur Organisasi',
+            'struktur' => Organization::latest()->get()->first()
         ]);
     }
 }

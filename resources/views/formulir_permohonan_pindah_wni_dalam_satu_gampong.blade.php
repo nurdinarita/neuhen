@@ -89,7 +89,7 @@
                                 <label for="telepon">Telepon</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" name="telepon" id="telepon"  placeholder="Telepon">
+                                <input type="text" class="form-control" name="no_telepon" id="telepon"  placeholder="Telepon">
                             </div>
                         </div>
                         <div class="row mt-4">
@@ -156,16 +156,16 @@
                         @for($i = 1; $i <= 10; $i++)
                         <div class="row mb-2" style="{{ ($i > 1) ? 'border-top:1px solid grey; padding-top: 10px;' : ''}}">
                             <div class="col-md-2">
-                                <label for="nik_keluarga{{ $i }}">{{ $i }}. NIK</label>
+                                <label for="nik_anggota_{{ $i }}">{{ $i }}. NIK</label>
                             </div>
                             <div class="col-md-4">
-                                <input type="text" class="form-control" name="nik_keluarga{{ $i }}" id="nik_keluarga{{ $i }}" placeholder="NIK">
+                                <input type="text" class="form-control" name="nik_anggota_{{ $i }}" id="nik_anggota_{{ $i }}" placeholder="NIK">
                             </div>
                             <div class="col-md-2">
-                                <label for="nama_keluarga{{ $i }}">Nama</label>
+                                <label for="nama_anggota_{{ $i }}">Nama</label>
                             </div>
                             <div class="col-md-4">
-                                <input type="text" class="form-control" name="nama_keluarga{{ $i }}" id="nama_keluarga{{ $i }}" placeholder="Nama">
+                                <input type="text" class="form-control" name="nama_anggota_{{ $i }}" id="nama_anggota_{{ $i }}" placeholder="Nama">
                             </div>
                         </div>
                         @endfor

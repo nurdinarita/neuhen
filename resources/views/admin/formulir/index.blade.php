@@ -46,10 +46,10 @@
             </table> --}}
             <ol>
               <li><a href="{{ url('admin/formulir-masuk/formulir-permohonan-pindah-wni-dalam-satu-gampong') }}" class="text-decoration-none">FORMULIR PERMOHONAN PINDAH WNI (Dalam Satu Gampong)</a></li>
-              <li><a href="" class="text-decoration-none">SURAT KETERANGAN PINDAH/MASUK GAMPONG NEUHEN (Dalam Satu Kabupaten / Antar Kecamatan)</a></li>
-              <li><a href="" class="text-decoration-none">SURAT KETERANGAN PINDAH/MASUK GAMPONG NEUHEN (Dalam Antar Kabupaten / Antar Provinsi)</a></li>
-              <li><a href="" class="text-decoration-none">AKTE KELAHIRAN</a></li>
-              <li><a href="" class="text-decoration-none">AKTE KEMATIAN</a></li>
+              <li><a href="{{ url('admin/formulir-masuk/formulir-permohonan-pindah-wni-dalam-satu-kabupaten') }}" class="text-decoration-none">SURAT KETERANGAN PINDAH/MASUK GAMPONG NEUHEN (Dalam Satu Kabupaten / Antar Kecamatan)</a></li>
+              <li><a href="{{ url('admin/formulir-masuk/surat-keterangan-pindah-masuk-gampong-neuhen-dalam-antar-kabupaten-antar-provinsi') }}" class="text-decoration-none">SURAT KETERANGAN PINDAH/MASUK GAMPONG NEUHEN (Dalam Antar Kabupaten / Antar Provinsi)</a></li>
+              <li><a href="{{ url('admin/formulir-masuk/akte-kelahiran') }}" class="text-decoration-none">AKTE KELAHIRAN</a></li>
+              <li><a href="{{ url('admin/formulir-masuk/akte-kematian') }}" class="text-decoration-none">AKTE KEMATIAN</a></li>
             </ol>
         </div>
     </div>

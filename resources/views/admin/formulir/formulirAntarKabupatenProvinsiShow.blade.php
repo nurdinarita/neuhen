@@ -28,6 +28,10 @@
                     <p>NIK Pemohon</p>
                     <p>Nama Lengkap</p>
                     <p>Alasan Pindah</p>
+                    <p>Alamat Tujuan Pindah</p>
+                    <p>Desa Tujuan Pindah</p>
+                    <p>Kec Tujuan Pindah</p>
+                    <p>Kode Pos Tujuan Pindah</p>
                     <p>Status KK Bagi Yang Tidak Pindah</p>
                     <p>Status KK Bagi Yang Pindah</p>
                     <h5>Data Keluarga Yang Pindah</h5>
@@ -50,6 +54,10 @@
                     <p>: {{ $data->nik_pemohon }}</p>
                     <p>: {{ $data->nama_lengkap }}</p>
                     <p>: {{ $data->alasan_pindah }}</p>
+                    <p>: {{ $data->alamat_tujuan_pindah }}</p>
+                    <p>: {{ $data->desa_tujuan_pindah }}</p>
+                    <p>: {{ $data->kec_tujuan_pindah }}</p>
+                    <p>: {{ $data->kode_pos_tujuan_pindah }}</p>
                     <p>: {{ $data->status_kk_yang_tidak_pindah }}</p>
                     <p>: {{ $data->status_kk_yang_pindah }}</p>
                     <h5><br></h5>

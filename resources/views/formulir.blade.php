@@ -46,10 +46,10 @@
                     <a class="nav-link" href="{{ url('/form/pindah-masuk-kab-prov') }}">SURAT KETERANGAN PINDAH/MASUK GAMPONG NEUHEN (<i>Dalam Antar Kabupaten / Antar Provinsi</i>)</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="{{ url('/form/pindah_masuk') }}">AKTE KELAHIRAN</a>
+                    <a class="nav-link" href="{{ url('/form/akte-kelahiran') }}">AKTE KELAHIRAN</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="{{ url('/form/pindah_masuk') }}">AKTE KEMATIAN</a>
+                    <a class="nav-link" href="{{ url('/form/akte-kematian') }}">AKTE KEMATIAN</a>
                 </li>
             </ol>
         </div>

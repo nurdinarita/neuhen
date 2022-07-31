@@ -36,7 +36,7 @@
                         <td class="col-2">{{ $dt->nomor_kk }}</td>
                         <td>{{ $dt->nama_kepala_keluarga }}</td>
                         <td class="col-1">
-                            <a href="{{ url('/admin/formulir-masuk/formulir-permohonan-pindah-wni-dalam-satu-gampong/'.$dt->id) }}" class="badge bg-info"><i class="fas fa-eye"></i></a>
+                            <a href="{{ url('/admin/formulir-masuk/formulir-permohonan-pindah-wni-dalam-satu-kabupaten/'.$dt->id) }}" class="badge bg-info"><i class="fas fa-eye"></i></a>
                             <a href="#" class="badge bg-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-url="{{ url('/admin/formulir-masuk/formulir-permohonan-pindah-wni-dalam-satu-gampong/'.$dt->id) }}"><i class="fas fa-trash"></i></a>
                         </td>
                     </tr>
@@ -46,6 +46,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

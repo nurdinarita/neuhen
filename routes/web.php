@@ -38,7 +38,15 @@ Route::get('/struktur-organisasi', [ProfilController::class, 'struktur_organisas
 Route::get('/formulir', [FormulirController::class, 'index']);
 Route::get('/form/formulir-permohonan-pindah-wni-dalam-satu-gampong', [FormulirController::class, 'formulir_permohonan_pindah_wni_dalam_satu_gampong']);
 Route::post('/form/pindah-masuk-gampong', [FormulirController::class, 'formulir_permohonan_pindah_wni_dalam_satu_gampong_store']);
-Route::get('/form/pindah-masuk-kab-kec', [FormulirController::class, 'pindah_masuk_gampong']);
+Route::get('/form/pindah-masuk-kab-kec', [FormulirController::class, 'pindah_masuk_kab_kec']);
+Route::post('/form/pindah-masuk-kab-kec', [FormulirController::class, 'pindah_masuk_kab_kec_store']);
+Route::get('/form/pindah-masuk-kab-prov', [FormulirController::class, 'pindah_masuk_kab_prov']);
+Route::post('/form/pindah-masuk-kab-prov', [FormulirController::class, 'pindah_masuk_kab_prov_store']);
+Route::get('/form/akte-kelahiran', [FormulirController::class, 'akte_kelahiran']);
+Route::post('/form/akte-kelahiran', [FormulirController::class, 'akte_kelahiran_store']);
+
+Route::get('/form/akte-kematian', [FormulirController::class, 'akte_kematian']);
+Route::post('/form/akte-kematian', [FormulirController::class, 'akte_kematian_store']);
 // Akhir Formulir
 
 // Informasi
@@ -64,8 +72,26 @@ Route::resource('/admin/pengumuman', PengumumanController::class);
 Route::resource('/admin/gallery', GalleryController::class);
 Route::resource('/admin/organizations', OrganizationController::class);
 Route::get('/admin/formulir-masuk', [FormulirMasukController::class, 'index']);
+
 Route::get('admin/formulir-masuk/formulir-permohonan-pindah-wni-dalam-satu-gampong', [FormulirMasukController::class, 'formulirPindahSatuGampong']);
 Route::get('admin/formulir-masuk/formulir-permohonan-pindah-wni-dalam-satu-gampong/{id}', [FormulirMasukController::class, 'formulirPindahSatuGampongShow']);
+Route::get('admin/formulir-masuk/formulir-permohonan-pindah-wni-dalam-satu-gampong/{id}/delete', [FormulirMasukController::class, 'formulirPindahSatuGampongDestroy']);
+
+Route::get('admin/formulir-masuk/formulir-permohonan-pindah-wni-dalam-satu-kabupaten', [FormulirMasukController::class, 'formulirPindahSatuKabupaten']);
+Route::get('admin/formulir-masuk/formulir-permohonan-pindah-wni-dalam-satu-kabupaten/{id}', [FormulirMasukController::class, 'formulirPindahSatuKabupatenShow']);
+Route::get('admin/formulir-masuk/formulir-permohonan-pindah-wni-dalam-satu-kabupaten/{id}/delete', [FormulirMasukController::class, 'formulirPindahSatuKabupatenDestroy']);
+
+Route::get('admin/formulir-masuk/surat-keterangan-pindah-masuk-gampong-neuhen-dalam-antar-kabupaten-antar-provinsi', [FormulirMasukController::class, 'formulirAntarKabupatenProvinsi']);
+Route::get('admin/formulir-masuk/surat-keterangan-pindah-masuk-gampong-neuhen-dalam-antar-kabupaten-antar-provinsi/{id}', [FormulirMasukController::class, 'formulirAntarKabupatenProvinsiShow']);
+Route::get('admin/formulir-masuk/formulir-masuk/surat-keterangan-pindah-masuk-gampong-neuhen-dalam-antar-kabupaten-antar-provinsi/{id}/delete', [FormulirMasukController::class, 'formulirAntarKabupatenProvinsiDestroy']);
+
+Route::get('admin/formulir-masuk/akte-kelahiran', [FormulirMasukController::class, 'akteKelahiran']);
+Route::get('admin/formulir-masuk/akte-kelahiran/{id}', [FormulirMasukController::class, 'akteKelahiranShow']);
+Route::get('admin/formulir-masuk/akte-kelahiran/{id}/delete', [FormulirMasukController::class, 'akteKelahiranDestroy']);
+
+Route::get('admin/formulir-masuk/akte-kematian', [FormulirMasukController::class, 'akteKematian']);
+Route::get('admin/formulir-masuk/akte-kematian/{id}', [FormulirMasukController::class, 'akteKematianShow']);
+Route::get('admin/formulir-masuk/akte-kematian/{id}/delete', [FormulirMasukController::class, 'akteKematianDestroy']);
 // Route::get('/admin/berita-gampong/search', [BeritaController::class, 'search']);
 
 

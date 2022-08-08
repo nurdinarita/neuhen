@@ -7,10 +7,10 @@
         <hr>
     </div>
     <div class="row mt-3">
-        <h4>TAHUN {{ $struktur->year }}</h4>
+        <h4>TAHUN {{ isset($struktur) ? $struktur->year : '' }}</h4>
     </div>
     <div class="row mt-3">
-        <img src="{{ asset('storage/organizations-image/'.$struktur->image) }}">
+        <img src="{{ isset($struktur) ? asset('storage/organizations-image/'.$struktur->image) : '' }}">
     </div>
 </div>
 @endsection

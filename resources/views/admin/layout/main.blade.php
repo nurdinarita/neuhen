@@ -39,8 +39,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Profil</a></li>
-                        <li><a class="dropdown-item" href="#!">Ubah Password</a></li>
+                        <li><a class="dropdown-item" href="#!">Administrator</a></li>
+                        {{-- <li><a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ubahPassword">Ubah Password</a></li> --}}
                         <li><hr class="dropdown-divider" /></li>
                         <li>
                             <a class="dropdown-item" href="{{ route('logout') }}" 
@@ -53,6 +53,7 @@
                     </ul>
                 </li>
             </ul>
+
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -80,7 +81,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-image"></i></div>
                                 Gallery
                             </a>
-                            <div class="sb-sidenav-menu-heading">Aparatur Desa</div>
+                            <div class="sb-sidenav-menu-heading">Desa</div>
                             <a class="nav-link {{ Request::is('admin/organizations') || $title == 'Edit Struktur Organisasi' || $title == 'Tambah Struktur Organisasi' || $title == 'Detail Struktur Organisasi' ? 'active' : '' }}" href="{{ url('admin/organizations') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-sitemap"></i></div>
                                 Struktur Organisasi
@@ -88,6 +89,14 @@
                             <a class="nav-link" href="{{ url('admin/formulir-masuk') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
                                 Formulir Masuk
+                            </a>
+                            <a class="nav-link" href="{{ url('admin/kartu-keluarga') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
+                                Data Kartu Keluarga
+                            </a>
+                            <a class="nav-link" href="{{ url('admin/dusun') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
+                                Dusun
                             </a>
                         </div>
                     </div>
@@ -132,5 +141,36 @@
         @include('sweetalert::alert')
         @yield('slug')
 
+        <!-- Modal Ubah Password -->
+        {{-- <div class="modal fade" id="ubahPassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ubah Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ url('admin/ubah-password') }}" method="post">@csrf
+                        <div class="mb-2">
+                            <label for="oldPassword">Password Lama</label>
+                            <input type="password" name="oldPassword" id="oldPassword" class="form-control" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="newPassword">Password Baru</label>
+                            <input type="password" name="newPassword" id="newPassword" class="form-control" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="confirmPassword">Konfirmasi Password Baru</label>
+                            <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ubah Password</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+                </div>
+            </div>
+        </div> --}}
     </body>
 </html>

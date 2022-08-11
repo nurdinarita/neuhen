@@ -3,10 +3,10 @@
 @section('container')
 <div class="container mt-5">
     <div class="row">
-      <!-- Berita Gampong Neuhen -->
+      <!-- Pengumuman Gampong Neuhen -->
       <div class="col-md-8">
         <div class="row mb-3">
-          <h2>Berita Gampong Neuhen</h2>
+          <h2>Pengumuman Gampong Neuhen</h2>
           <hr>
         </div>
   
@@ -23,7 +23,7 @@
       </div>
 
 
-      <!-- Akhir Berita Gampong Neuhen -->
+      <!-- Akhir Pengumuman Gampong Neuhen -->
   
   
       <div class="col-md-1"></div>

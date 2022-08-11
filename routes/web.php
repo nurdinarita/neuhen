@@ -8,13 +8,15 @@ use App\Http\Controllers\InformasiController;
 
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
-
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\Admin\KegiatanController;
 use App\Http\Controllers\Admin\PengumumanController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\OrganizationController;
 use App\Http\Controllers\Admin\FormulirMasukController;
+use App\Http\Controllers\Admin\KartuKeluargaController;
+use App\Http\Controllers\Admin\DusunController;
 
 Route::get('check_slug', function () {
     $slug = SlugService::createSlug(App\Models\News::class, 'slug', request('title'));
@@ -62,9 +64,7 @@ Route::get('/informasi/kegiatan', [InformasiController::class, 'kegiatan']);
 /* Akhir Kegiatan */
 // Akhir Informasi
 
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard')->with(['title' => 'Dashboard']);
-});
+Route::get('/admin/dashboard', [DashboardController::class, 'index']);
 
 Route::resource('/admin/berita-gampong', BeritaController::class);
 Route::resource('/admin/kegiatan-gampong', KegiatanController::class);
@@ -92,7 +92,9 @@ Route::get('admin/formulir-masuk/akte-kelahiran/{id}/delete', [FormulirMasukCont
 Route::get('admin/formulir-masuk/akte-kematian', [FormulirMasukController::class, 'akteKematian']);
 Route::get('admin/formulir-masuk/akte-kematian/{id}', [FormulirMasukController::class, 'akteKematianShow']);
 Route::get('admin/formulir-masuk/akte-kematian/{id}/delete', [FormulirMasukController::class, 'akteKematianDestroy']);
-// Route::get('/admin/berita-gampong/search', [BeritaController::class, 'search']);
+
+Route::resource('admin/kartu-keluarga', KartuKeluargaController::class);
+Route::resource('admin/dusun', DusunController::class);
 
 
 Auth::routes();

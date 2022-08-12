@@ -55,6 +55,14 @@
                 </div>
             </div>
         </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-info text-white mb-4">
+                <div class="card-body">
+                    <b><i class="fas fa-clipboard-list"></i> Total Dusun</b>
+                    <p>{{ $dusun }}</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
